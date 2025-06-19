@@ -3,17 +3,17 @@
 def convert_number_to_words(number: int) -> str:
     
 
-    units_hudred = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"]
+    units_hundred = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"]
     tens = ["không", "mười", "hai mươi", "ba mươi", "bốn mươi", "năm mươi", 
             "sáu mươi", "bảy mươi", "tám mươi", "chín mươi"]
-    units = ["không", "một", "hai", "ba", "bốn", "lăm", "sáu", "bảy", "tám", "chín"]
+    units = ["không", "mốt", "hai", "ba", "bốn", "lăm", "sáu", "bảy", "tám", "chín"]
 
     
     hundred_digit = number // 100
     ten_digit = (number // 10) % 10
     unit_digit = number % 10
     
-    result = f"{units_hudred[hundred_digit]} trăm"
+    result = f"{units_hundred[hundred_digit]} trăm"
     
     if ten_digit > 0:
         result += f" {tens[ten_digit]}"
