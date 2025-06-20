@@ -1,15 +1,18 @@
 import math
+
+
 def find_SoNguyenTo(n):
     if n < 2:
         return []
 
-    primes = 0
+    primes = []
     for num in range(2, n + 1):
         for i in range(2, int(math.sqrt(num)) + 1):
+     
             if num % i == 0:
                 break
-            else :
-                primes += num
+            else:
+                primes.append(num)
                 break
 
     return primes
